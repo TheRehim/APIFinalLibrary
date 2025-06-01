@@ -1,0 +1,11 @@
+﻿services:
+  apifinal:
+    image: apifinallibrary:dev
+    build:
+        context: .
+        dockerfile: Dockerfile
+    container_name: APIFinalLibrary
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_URLS=http://+:5000
